@@ -1,0 +1,7 @@
+dist/
+
+# `go build ./...` in the repo root writes the binary under the MODULE's last path
+# element — here `mongo` — beside the sources. `make build` puts the artifact in
+# dist/ where it belongs; this line is so a bare `go build` cannot leave a 23 MB ELF
+# in the working tree for someone to commit.
+/mongo
